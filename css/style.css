@@ -1,0 +1,677 @@
+/*splosno*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.grid-center {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+.bg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/*Delovnik*/
+.delovnik-cont {
+  position: fixed;
+  width: 100vw;
+  height: 90vh;
+  top: 10vh;
+  background-color: rgba(5, 5, 5, 0.8);
+  z-index: 10;
+}
+.delovnik {
+  position: fixed;
+  width: 700px;
+  height: 500px;
+  background-color: rgb(205, 205, 205);
+  z-index: 10;
+  top: calc((100vh - 500px) / 2 + 5vh);
+  left: calc((100vw - 700px) / 2);
+  align-content: unset;
+}
+.delovnik-naslov {
+  font-family: "RocknRoll One", sans-serif;
+  font-size: 60px;
+  color: rgb(255, 0, 228);
+}
+.delovnik-hamburger {
+  width: 50px;
+  height: 50px;
+  background: red;
+  position: absolute;
+  right: 2vw;
+  top: 3vh;
+}
+
+/*pokazatelj odprto*/
+.odprto {
+  position: fixed;
+  width: 150px;
+  height: 50px;
+  bottom: 5%;
+  right: 5%;
+  border-radius: 50px;
+  border: 2px solid black;
+  background: rgba(5, 5, 5, 0.9);
+  line-height: 50px;
+  text-align: center;
+  z-index: 5;
+  color: whitesmoke;
+}
+/*navigation bar*/
+nav {
+  text-transform: uppercase;
+  height: 11vh;
+  width: 100vw;
+  background-color: rgb(5, 5, 5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  z-index: 5;
+}
+
+/*meni*/
+.menu-btn {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  color: rgb(255, 0, 228);
+  text-decoration: none;
+}
+.menu-cont,
+.menu-cont1 {
+  display: flex;
+  width: 45vw;
+  max-width: 700px;
+  min-width: 460px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+}
+.menu-cont1 {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 2fr;
+  justify-content: center;
+  height: 80vh;
+  width: 70vw;
+  margin-top: 10vh;
+}
+.drop {
+  font-size: 5vh;
+  font-family: "RocknRoll One", sans-serif;
+}
+.drop:hover {
+  font-size: 5vh;
+}
+
+/*logo*/
+.logo {
+  background-image: url("../images/logo.png");
+  height: 70px;
+  width: 70px;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  left: 5%;
+}
+
+/*zvoncek*/
+.zvoncek {
+  background-image: url("../images/zvoncek.png");
+  height: 56px;
+  width: 80px;
+  background-size: cover;
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+}
+/*Prvi del*/
+.body1 {
+  position: relative;
+  top: 11vh;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  box-shadow: 0 5px 100px rgba(5, 5, 5, 0.9);
+}
+
+/*Prvi del prva polovica*/
+.text1 {
+  background-image: url("../images/odzadje.png");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+/*Rumen krog*/
+.circle1 {
+  background: rgb(250, 250, 0);
+  min-height: 550px;
+  min-width: 550px;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  left: calc((80vw - 550px) / 2);
+  top: calc((90vh - 550px) / 2);
+  align-content: unset;
+}
+.slika1-1 {
+  background-color: rgb(26, 26, 26);
+  height: 100%;
+  width: 40%;
+}
+
+/*Prvi del druga polovica*/
+.slika1-2 {
+  height: 100%;
+  width: 60%;
+  background-image: url("../images/frizerski-salon-simple-ljubljana-3.jpg");
+}
+.potrebujes {
+  margin-top: 100px;
+  font-size: 72px;
+  font-weight: 700;
+  padding: 0 5vw;
+}
+
+/*Gumb Nujno!*/
+.nujno {
+  font-family: "Roboto", sans-serif;
+  height: 90px;
+  width: 180px;
+  border-radius: 50px;
+  font-size: 34px;
+  border: 3px solid black;
+  background: rgba(50, 50, 50, 0);
+  margin-left: 250px;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s, border 0.3s, font-size 0.3s;
+  outline: none;
+}
+
+/* puscica dol*/
+.scroll {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  height: 70px;
+  width: 100px;
+  background-image: url("../images/scrolldown.png");
+  animation: MoveUpDown 1.3s linear infinite;
+  cursor: pointer;
+}
+
+/*Body 2 && 3*/
+.body2,
+.body3 {
+  position: sticky;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+.body2 {
+  margin-top: 10vh;
+}
+/*Odzadje 2 & 3 body*/
+.bg {
+  background-image: url("../images/gradient2.2.jpg");
+}
+/*Slika trepalnic in salona*/
+.slika2,
+.slika3 {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  background-image: url("../images/Frizerski-salon-SIMPLE-Ljubljana-center.jpg");
+  top: calc((100vh - 500px) / 2);
+  right: calc(50vw - 500px);
+}
+.slika2 {
+  background-image: url("../images/lashes.jpg");
+  left: calc(50vw - 500px);
+}
+
+/*Text kartici v body 2 & 3*/
+.text2,
+.text3 {
+  height: 400px;
+  width: 550px;
+  background: whitesmoke;
+  position: absolute;
+  box-shadow: 0 10px 10px rgba(5, 5, 5, 0.9);
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+  z-index: 4;
+  top: calc((100vh - 400px) / 2);
+}
+.text2 {
+  right: calc(50vw - 550px);
+}
+.text3 {
+  left: calc(50vw - 550px);
+}
+.novo {
+  font-family: "Anton", sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+  letter-spacing: 2px;
+  display: flex;
+}
+.volumen {
+  color: rgb(255, 0, 228);
+  font-size: 70px;
+  font-family: "Anton", sans-serif;
+}
+.odprtje {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: black;
+}
+.preveri {
+  font-family: "Roboto", sans-serif;
+  height: 90px;
+  width: 180px;
+  border-radius: 50px;
+  font-size: 34px;
+  border: 3px solid black;
+  background: rgba(0, 0, 0, 0);
+  margin-left: 50px;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s, border 0.3s, font-size 0.3s;
+  outline: none;
+  margin-top: 10px;
+}
+
+.point,
+.lashes {
+  background-image: url("../images/point.png");
+  height: 150px;
+  width: 150px;
+}
+.lashes {
+  background-image: url("../images/lashe.png");
+  width: 200px;
+}
+.wrap1 {
+  display: flex;
+  align-items: center;
+}
+
+/*Footer*/
+footer {
+  height: 50vh;
+  background-image: url("../images/footer.jpg");
+  display: grid;
+  color: white;
+}
+.noga-cont {
+  width: 100%;
+  height: 47vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+.disclaimer {
+  height: 3vh;
+  text-align: center;
+}
+.noga-cont .cont {
+  display: grid;
+  justify-content: center;
+  padding: 2vh 0;
+}
+.noga-cont1 {
+  grid-template-rows: 1fr 0.5fr 5fr;
+  grid-template-columns: 1fr;
+}
+.noga-cont2 {
+  grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+.noga-cont3 {
+  grid-template-rows: 1fr 1fr 1fr 2fr 1fr;
+  grid-template-columns: 1fr;
+}
+.noga-cont div div {
+  padding: 0;
+}
+.icon {
+  background-size: cover;
+  height: 25px;
+  width: 25px;
+  margin-bottom: 4px;
+  margin-right: 4px;
+  margin-left: 3vw;
+}
+.icon1 {
+  background-image: url("../images/telefon.png");
+}
+.icon2 {
+  background-image: url("../images/telefon.png");
+}
+.icon3 {
+  background-image: url("../images/mail.png");
+}
+.icon4 {
+  background-image: url("../images/insta.png");
+}
+.icon5 {
+  background-image: url("../images/fblogo.png");
+}
+.header {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  font-family: "Permanent Marker", cursive;
+  color: rgb(255, 0, 228);
+  width: 100%;
+  justify-content: center;
+  display: grid;
+}
+.map {
+  width: 37.5vw;
+  align-content: unset;
+}
+.wrap-cont2 {
+  display: flex;
+  align-items: center;
+}
+.wrap-cont2 div {
+  cursor: pointer;
+}
+
+#email {
+  height: 30px;
+  width: 350px;
+  font-size: 22px;
+  color: white;
+  background: none;
+  border: none;
+  border-bottom: 1px solid yellow;
+  outline: none;
+}
+.email-cont {
+  width: 100%;
+}
+#novice-btn {
+  height: 50px;
+  border: 1px solid rgb(255, 0, 228);
+  color: rgb(255, 0, 228);
+  width: 150px;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  animation: all 0.3s ease;
+}
+.novice-btn-cont {
+  width: 100%;
+}
+/* Animacije*/
+.wrap-cont2 div:hover {
+  color: yellow;
+}
+.btn-animation:hover {
+  color: rgb(255, 0, 228);
+  font-size: 36px;
+  border: 3px solid rgb(255, 0, 228);
+}
+.btn-animation:active {
+  font-size: 32px;
+}
+.menu-btn:hover {
+  color: yellow;
+  font-size: 16.5px;
+}
+#novice-btn:hover {
+  font-size: 25.5px;
+}
+#novice-btn:active {
+  font-size: 18px;
+}
+@keyframes MoveUpDown {
+  0% {
+    bottom: 3%;
+  }
+  50% {
+    bottom: 4%;
+  }
+  100% {
+    bottom: 3%;
+  }
+}
+.novice-text {
+  width: 350px;
+}
+.novice-text-cont {
+  width: 100%;
+}
+.back-up {
+  height: 50px;
+  width: 50px;
+  background-image: url("../images/gor.png");
+  position: absolute;
+  right: 1.5vw;
+  bottom: -245vh;
+}
+.top {
+  height: 1px;
+  width: 1px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+/* Responsivnes */
+
+@media (max-width: 800px) {
+  .zvoncek {
+    background-image: url("../images/burger.png");
+    height: 50px;
+    width: 50px;
+  }
+  /* drop down list */
+
+  .menu-cont {
+    visibility: hidden;
+  }
+  .menu-btn:hover {
+    color: yellow;
+    font-size: 5vh;
+  }
+  .drop-list {
+    position: fixed;
+    z-index: 10;
+    height: 89vh;
+    width: 100vw;
+    bottom: 0;
+    background: rgb(14, 14, 14);
+    clip-path: circle(10px at 100% -10%);
+    transition: all 1s;
+  }
+  .drop-list.open {
+    clip-path: circle(1200px at 100% -10%);
+  }
+  .menu-btn {
+    z-index: 10;
+    font-size: 5vh;
+    opacity: 0;
+  }
+  .menu-btn.show {
+    opacity: 1;
+  }
+
+  /*Prvi body*/
+  .body1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 90vh;
+    grid-template-rows: 1fr;
+  }
+  .circle1 {
+    height: 90vw;
+    width: 90vw;
+    min-width: 90vw;
+    min-height: 90vw;
+    max-width: 550px;
+    max-height: 550px;
+    left: calc((100vw - 90vw) / 2);
+    top: calc((90vh - 90vw) / 2);
+    grid-template-rows: 2fr 1fr;
+  }
+  .potrebujes {
+    font-size: 10vw;
+    height: 15vh;
+    width: 50vw;
+    margin-top: 28%;
+  }
+  .nujno {
+    margin: 0;
+    height: 15vw;
+    width: 35vw;
+    font-size: calc(5vw);
+    margin: 0 calc((100% - 35vw) / 2);
+  }
+  .btn-animation:hover {
+    font-size: calc(4.5vw);
+  }
+  .btn-animation:active {
+    font-size: calc(3vw);
+  }
+  .slika1-2 {
+    visibility: hidden;
+  }
+  .slika1-1 {
+    width: 100%;
+    height: 100%;
+  }
+  .text1 {
+    height: 100%;
+  }
+
+  /* middle */
+  .body2,
+  .body3 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    height: 100vh;
+  }
+  .text2,
+  .text3 {
+    width: 90vw;
+    height: 350px;
+    max-width: 550px;
+    top: calc((90vh - 350px) / 2);
+  }
+  .text2 {
+    right: 50%;
+  }
+  .text3 {
+    left: 50%;
+  }
+  .slika2,
+  .slika3 {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+  .preveri {
+    margin-left: 5%;
+    margin-top: 20px;
+  }
+  /* Footer */
+
+  footer {
+    height: 140vh;
+    background-image: url("../images/footer-vert.jpg");
+    padding-top: 1vh;
+  }
+  .noga-cont {
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100%;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 100%;
+  }
+  .noga-cont .cont {
+    padding: 0 1%;
+    width: 98%;
+    height: 42vh;
+    grid-column: 2;
+    background: rgba(5, 5, 5, 0.6);
+    border-radius: 3%;
+    margin-top: 1vh;
+  }
+  .noga-cont1 {
+    grid-row: 1;
+  }
+  .noga-cont2 {
+    grid-row: 2;
+  }
+  .noga-cont3 {
+    grid-row: 3;
+  }
+  .novice-text {
+    padding: 0 1vw;
+  }
+  .map {
+    width: 100%;
+  }
+  .back-up {
+    left: 2vw;
+    right: unset;
+    bottom: -337vh;
+    width: 40px;
+    height: 40px;
+  }
+  .scroll {
+    left: calc(50vw - 50px);
+  }
+  .disclaimer {
+    padding-top: 2vh;
+  }
+}
+
+@media (max-width: 605px) and (min-width: 0px) {
+  .text2,
+  .text3 {
+    width: 90vw;
+    height: 350px;
+    max-width: 550px;
+    right: 5vw;
+  }
+  .text3 {
+    left: 5vw;
+  }
+}
+@media (max-width: 800px) and (min-width: 605px) {
+  .text2,
+  .text3 {
+    width: 90vw;
+    height: 350px;
+    max-width: 550px;
+    right: calc((100vw - 550px) / 2);
+  }
+  .text3 {
+    left: calc((100vw - 550px) / 2);
+  }
+}
+@media (min-width: 800px) {
+  .menu-cont1 {
+    display: none;
+  }
+}
